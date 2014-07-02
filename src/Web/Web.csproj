@@ -1,0 +1,501 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{9F8C6586-060C-409D-A258-28817C642DD4}</ProjectGuid>
+    <ProjectTypeGuids>{E3E379DF-F4C6-4180-9B81-6769533ABE47};{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Web</RootNamespace>
+    <AssemblyName>Web</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.4.5.6\lib\net40\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+    </Reference>
+    <Reference Include="System.Net.Http.Formatting, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.4.0.20710.0\lib\net40\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+    </Reference>
+    <Reference Include="System.Web.Helpers, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.4.0.20710.0\lib\net40\System.Web.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.WebHost, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.WebHost.4.0.20710.0\lib\net40\System.Web.Http.WebHost.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.4.0.20710.0\lib\net40\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.2.0.20710.0\lib\net40\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\PostController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PostView.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="App_Start\WebApiConfig.cs" />
+    <Content Include="components\core-ajax\core-ajax.html" />
+    <Content Include="components\core-ajax\core-xhr.html" />
+    <Content Include="components\core-ajax\demo.html" />
+    <Content Include="components\core-ajax\index.html" />
+    <Content Include="components\core-collapse\core-collapse.css" />
+    <Content Include="components\core-collapse\core-collapse.html" />
+    <Content Include="components\core-collapse\demo.html" />
+    <Content Include="components\core-collapse\index.html" />
+    <Content Include="components\core-component-page\bowager-logo.png" />
+    <Content Include="components\core-component-page\core-component-page.html" />
+    <Content Include="components\core-component-page\demo.html" />
+    <Content Include="components\core-component-page\index.html" />
+    <Content Include="components\core-drawer-panel\core-drawer-panel.css" />
+    <Content Include="components\core-drawer-panel\core-drawer-panel.html" />
+    <Content Include="components\core-drawer-panel\demo.html" />
+    <Content Include="components\core-drawer-panel\index.html" />
+    <Content Include="components\core-drawer-panel\metadata.html" />
+    <Content Include="components\core-header-panel\core-header-panel.css" />
+    <Content Include="components\core-header-panel\core-header-panel.html" />
+    <Content Include="components\core-header-panel\demo.html" />
+    <Content Include="components\core-header-panel\index.html" />
+    <Content Include="components\core-header-panel\metadata.html" />
+    <Content Include="components\core-icon-button\core-icon-button.css" />
+    <Content Include="components\core-icon-button\core-icon-button.html" />
+    <Content Include="components\core-icon-button\demo.html" />
+    <Content Include="components\core-icon-button\index.html" />
+    <Content Include="components\core-icon-button\metadata.html" />
+    <Content Include="components\core-iconset-svg\core-iconset-svg.html" />
+    <Content Include="components\core-iconset-svg\demo.html" />
+    <Content Include="components\core-iconset-svg\index.html" />
+    <Content Include="components\core-iconset-svg\svg-sample-icons.html" />
+    <Content Include="components\core-iconset\core-iconset.html" />
+    <Content Include="components\core-iconset\demo.html" />
+    <Content Include="components\core-iconset\index.html" />
+    <Content Include="components\core-iconset\my-icons.png" />
+    <Content Include="components\core-icons\core-icons.html" />
+    <Content Include="components\core-icons\demo.html" />
+    <Content Include="components\core-icons\iconsets\av-icons.html" />
+    <Content Include="components\core-icons\iconsets\communication-icons.html" />
+    <Content Include="components\core-icons\iconsets\device-icons.html" />
+    <Content Include="components\core-icons\iconsets\hardware-icons.html" />
+    <Content Include="components\core-icons\iconsets\icons.html" />
+    <Content Include="components\core-icons\iconsets\image-icons.html" />
+    <Content Include="components\core-icons\iconsets\maps-icons.html" />
+    <Content Include="components\core-icons\iconsets\notification-icons.html" />
+    <Content Include="components\core-icons\iconsets\png-icons.html" />
+    <Content Include="components\core-icons\iconsets\social-icons.html" />
+    <Content Include="components\core-icons\index.html" />
+    <Content Include="components\core-icon\core-icon.css" />
+    <Content Include="components\core-icon\core-icon.html" />
+    <Content Include="components\core-icon\demo.html" />
+    <Content Include="components\core-icon\index.html" />
+    <Content Include="components\core-icon\metadata.html" />
+    <Content Include="components\core-item\core-item.css" />
+    <Content Include="components\core-item\core-item.html" />
+    <Content Include="components\core-item\demo.html" />
+    <Content Include="components\core-item\index.html" />
+    <Content Include="components\core-item\metadata.html" />
+    <Content Include="components\core-layout\core-layout-host.css" />
+    <Content Include="components\core-layout\core-layout.css" />
+    <Content Include="components\core-layout\core-layout.html" />
+    <Content Include="components\core-layout\demo-body.html" />
+    <Content Include="components\core-layout\demo-css.html" />
+    <Content Include="components\core-layout\demo-parent.html" />
+    <Content Include="components\core-layout\demo.html" />
+    <Content Include="components\core-layout\index.html" />
+    <Content Include="components\core-layout\metadata.html" />
+    <Content Include="components\core-localstorage\core-localstorage.html" />
+    <Content Include="components\core-localstorage\demo.html" />
+    <Content Include="components\core-localstorage\index.html" />
+    <Content Include="components\core-media-query\core-media-query.html" />
+    <Content Include="components\core-media-query\demo.html" />
+    <Content Include="components\core-media-query\index.html" />
+    <Content Include="components\core-menu\core-menu.css" />
+    <Content Include="components\core-menu\core-menu.html" />
+    <Content Include="components\core-menu\core-submenu.css" />
+    <Content Include="components\core-menu\core-submenu.html" />
+    <Content Include="components\core-menu\demo.html" />
+    <Content Include="components\core-menu\index.html" />
+    <Content Include="components\core-menu\metadata.html" />
+    <Content Include="components\core-meta\core-meta.html" />
+    <Content Include="components\core-meta\demo.html" />
+    <Content Include="components\core-meta\index.html" />
+    <Content Include="components\core-overlay\core-key-helper.html" />
+    <Content Include="components\core-overlay\core-overlay-layer.html" />
+    <Content Include="components\core-overlay\core-overlay.html" />
+    <Content Include="components\core-overlay\demo.html" />
+    <Content Include="components\core-overlay\index.html" />
+    <Content Include="components\core-pages\core-pages.css" />
+    <Content Include="components\core-pages\core-pages.html" />
+    <Content Include="components\core-pages\demo.html" />
+    <Content Include="components\core-pages\index.html" />
+    <Content Include="components\core-pages\metadata.html" />
+    <Content Include="components\core-scaffold\core-scaffold.html" />
+    <Content Include="components\core-scaffold\demo.html" />
+    <Content Include="components\core-scaffold\index.html" />
+    <Content Include="components\core-scaffold\metadata.html" />
+    <Content Include="components\core-selection\core-selection.html" />
+    <Content Include="components\core-selection\demo.html" />
+    <Content Include="components\core-selection\index.html" />
+    <Content Include="components\core-selector\core-selector.html" />
+    <Content Include="components\core-selector\demo.html" />
+    <Content Include="components\core-selector\index.html" />
+    <Content Include="components\core-selector\metadata.html" />
+    <Content Include="components\core-toolbar\core-toolbar.css" />
+    <Content Include="components\core-toolbar\core-toolbar.html" />
+    <Content Include="components\core-toolbar\demo.html" />
+    <Content Include="components\core-toolbar\index.html" />
+    <Content Include="components\core-toolbar\metadata.html" />
+    <Content Include="components\core-tooltip\core-tooltip.css" />
+    <Content Include="components\core-tooltip\core-tooltip.html" />
+    <Content Include="components\core-tooltip\demo.html" />
+    <Content Include="components\core-tooltip\index.html" />
+    <Content Include="components\core-tooltip\metadata.html" />
+    <Content Include="components\core-transition\core-transition-css.html" />
+    <Content Include="components\core-transition\core-transition-overlay.css" />
+    <Content Include="components\core-transition\core-transition.html" />
+    <Content Include="components\core-transition\index.html" />
+    <Content Include="components\font-roboto\roboto.html" />
+    <Content Include="components\paper-button\demo.html" />
+    <Content Include="components\paper-button\index.html" />
+    <Content Include="components\paper-button\metadata.html" />
+    <Content Include="components\paper-button\paper-button.css" />
+    <Content Include="components\paper-button\paper-button.html" />
+    <Content Include="components\paper-focusable\paper-focusable.html" />
+    <Content Include="components\paper-icon-button\demo.html" />
+    <Content Include="components\paper-icon-button\index.html" />
+    <Content Include="components\paper-icon-button\paper-icon-button.css" />
+    <Content Include="components\paper-icon-button\paper-icon-button.html" />
+    <Content Include="components\paper-icon-button\pulse-ink.css" />
+    <Content Include="components\paper-ripple\demo.html" />
+    <Content Include="components\paper-ripple\index.html" />
+    <Content Include="components\paper-ripple\paper-ripple.html" />
+    <Content Include="components\paper-ripple\raw.html" />
+    <Content Include="components\paper-shadow\demo.html" />
+    <Content Include="components\paper-shadow\index.html" />
+    <Content Include="components\paper-shadow\metadata.html" />
+    <Content Include="components\paper-shadow\paper-shadow.css" />
+    <Content Include="components\paper-shadow\paper-shadow.html" />
+    <Content Include="components\paper-tabs\demo.html" />
+    <Content Include="components\paper-tabs\index.html" />
+    <Content Include="components\paper-tabs\metadata.html" />
+    <Content Include="components\paper-tabs\paper-tab.css" />
+    <Content Include="components\paper-tabs\paper-tab.html" />
+    <Content Include="components\paper-tabs\paper-tabs.css" />
+    <Content Include="components\paper-tabs\paper-tabs.html" />
+    <Content Include="components\platform\platform.js" />
+    <Content Include="components\polymer\layout.html" />
+    <Content Include="components\polymer\polymer.html" />
+    <Content Include="components\polymer\polymer.js" />
+    <Content Include="components\qp-stuff\font-roboto2\roboto2.html" />
+    <Content Include="components\qp-stuff\paper-button\demo.html" />
+    <Content Include="components\qp-stuff\paper-button\index.html" />
+    <Content Include="components\qp-stuff\paper-button\metadata.html" />
+    <Content Include="components\qp-stuff\paper-button\paper-button.css" />
+    <Content Include="components\qp-stuff\paper-button\paper-button.html" />
+    <Content Include="components\qp-stuff\paper-focusable\paper-focusable.html" />
+    <Content Include="components\qp-stuff\paper-icon-button\demo.html" />
+    <Content Include="components\qp-stuff\paper-icon-button\index.html" />
+    <Content Include="components\qp-stuff\paper-icon-button\paper-icon-button.css" />
+    <Content Include="components\qp-stuff\paper-icon-button\paper-icon-button.html" />
+    <Content Include="components\qp-stuff\paper-icon-button\pulse-ink.css" />
+    <Content Include="components\qp-stuff\paper-ripple\demo.html" />
+    <Content Include="components\qp-stuff\paper-ripple\index.html" />
+    <Content Include="components\qp-stuff\paper-ripple\paper-ripple.html" />
+    <Content Include="components\qp-stuff\paper-ripple\raw.html" />
+    <Content Include="components\qp-stuff\paper-shadow\demo.html" />
+    <Content Include="components\qp-stuff\paper-shadow\index.html" />
+    <Content Include="components\qp-stuff\paper-shadow\metadata.html" />
+    <Content Include="components\qp-stuff\paper-shadow\paper-shadow.css" />
+    <Content Include="components\qp-stuff\paper-shadow\paper-shadow.html" />
+    <Content Include="components\qp-stuff\paper-tabs\demo.html" />
+    <Content Include="components\qp-stuff\paper-tabs\index.html" />
+    <Content Include="components\qp-stuff\paper-tabs\metadata.html" />
+    <Content Include="components\qp-stuff\paper-tabs\paper-tab.css" />
+    <Content Include="components\qp-stuff\paper-tabs\paper-tab.html" />
+    <Content Include="components\qp-stuff\paper-tabs\paper-tabs.css" />
+    <Content Include="components\qp-stuff\paper-tabs\paper-tabs.html" />
+    <Content Include="CustomElements\post-card.html" />
+    <Content Include="CustomElements\post-list.html" />
+    <Content Include="CustomElements\post-service.html" />
+    <Content Include="Global.asax" />
+    <Content Include="Images\avatar-01.svg" />
+    <Content Include="Images\avatar-02.svg" />
+    <Content Include="Images\avatar-03.svg" />
+    <Content Include="Images\avatar-04.svg" />
+    <Content Include="Images\avatar-05.svg" />
+    <Content Include="Images\avatar-06.svg" />
+    <Content Include="Images\avatar-07.svg" />
+    <Content Include="Images\avatar-08.svg" />
+    <Content Include="Images\avatar-09.svg" />
+    <Content Include="Images\avatar-10.svg" />
+    <Content Include="Images\avatar-11.svg" />
+    <Content Include="Images\avatar-12.svg" />
+    <Content Include="Images\avatar-13.svg" />
+    <Content Include="Images\avatar-14.svg" />
+    <Content Include="Images\avatar-15.svg" />
+    <Content Include="Images\avatar-16.svg" />
+    <Content Include="Styles\Home\Index.css" />
+    <Content Include="Web.config" />
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Views\Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Home\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="api\posts.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="components\core-ajax\.bower.json" />
+    <Content Include="components\core-ajax\bower.json" />
+    <Content Include="components\core-ajax\README.md" />
+    <Content Include="components\core-collapse\.bower.json" />
+    <Content Include="components\core-collapse\bower.json" />
+    <Content Include="components\core-collapse\README.md" />
+    <Content Include="components\core-component-page\.bower.json" />
+    <Content Include="components\core-component-page\bower.json" />
+    <Content Include="components\core-component-page\README.md" />
+    <Content Include="components\core-drawer-panel\.bower.json" />
+    <Content Include="components\core-drawer-panel\bower.json" />
+    <Content Include="components\core-drawer-panel\README.md" />
+    <Content Include="components\core-header-panel\.bower.json" />
+    <Content Include="components\core-header-panel\bower.json" />
+    <Content Include="components\core-header-panel\README.md" />
+    <Content Include="components\core-icon-button\.bower.json" />
+    <Content Include="components\core-icon-button\bower.json" />
+    <Content Include="components\core-icon-button\README.md" />
+    <Content Include="components\core-iconset-svg\.bower.json" />
+    <Content Include="components\core-iconset-svg\bower.json" />
+    <Content Include="components\core-iconset-svg\README.md" />
+    <Content Include="components\core-iconset\.bower.json" />
+    <Content Include="components\core-iconset\bower.json" />
+    <Content Include="components\core-iconset\README.md" />
+    <Content Include="components\core-icons\.bower.json" />
+    <Content Include="components\core-icons\bower.json" />
+    <Content Include="components\core-icons\README.md" />
+    <Content Include="components\core-icon\.bower.json" />
+    <Content Include="components\core-icon\bower.json" />
+    <Content Include="components\core-icon\README.md" />
+    <Content Include="components\core-item\.bower.json" />
+    <Content Include="components\core-item\bower.json" />
+    <Content Include="components\core-item\README.md" />
+    <Content Include="components\core-layout\.bower.json" />
+    <Content Include="components\core-layout\bower.json" />
+    <Content Include="components\core-layout\README.md" />
+    <Content Include="components\core-localstorage\.bower.json" />
+    <Content Include="components\core-localstorage\bower.json" />
+    <Content Include="components\core-localstorage\README.md" />
+    <Content Include="components\core-media-query\.bower.json" />
+    <Content Include="components\core-media-query\bower.json" />
+    <Content Include="components\core-media-query\README.md" />
+    <Content Include="components\core-menu\.bower.json" />
+    <Content Include="components\core-menu\bower.json" />
+    <Content Include="components\core-menu\README.md" />
+    <Content Include="components\core-meta\.bower.json" />
+    <Content Include="components\core-meta\bower.json" />
+    <Content Include="components\core-meta\README.md" />
+    <Content Include="components\core-overlay\.bower.json" />
+    <Content Include="components\core-overlay\bower.json" />
+    <Content Include="components\core-overlay\README.md" />
+    <Content Include="components\core-pages\.bower.json" />
+    <Content Include="components\core-pages\bower.json" />
+    <Content Include="components\core-pages\README.md" />
+    <Content Include="components\core-scaffold\.bower.json" />
+    <Content Include="components\core-scaffold\bower.json" />
+    <Content Include="components\core-scaffold\README.md" />
+    <Content Include="components\core-selection\.bower.json" />
+    <Content Include="components\core-selection\bower.json" />
+    <Content Include="components\core-selection\README.md" />
+    <Content Include="components\core-selector\.bower.json" />
+    <Content Include="components\core-selector\bower.json" />
+    <Content Include="components\core-selector\README.md" />
+    <Content Include="components\core-toolbar\.bower.json" />
+    <Content Include="components\core-toolbar\bower.json" />
+    <Content Include="components\core-toolbar\README.md" />
+    <Content Include="components\core-tooltip\.bower.json" />
+    <Content Include="components\core-tooltip\bower.json" />
+    <Content Include="components\core-tooltip\README.md" />
+    <Content Include="components\core-transition\.bower.json" />
+    <Content Include="components\core-transition\bower.json" />
+    <Content Include="components\core-transition\README.md" />
+    <Content Include="components\font-roboto\.bower.json" />
+    <Content Include="components\paper-button\.bower.json" />
+    <Content Include="components\paper-button\bower.json" />
+    <Content Include="components\paper-button\README.md" />
+    <Content Include="components\paper-focusable\.bower.json" />
+    <Content Include="components\paper-focusable\bower.json" />
+    <Content Include="components\paper-focusable\README.md" />
+    <Content Include="components\paper-icon-button\.bower.json" />
+    <Content Include="components\paper-icon-button\bower.json" />
+    <Content Include="components\paper-icon-button\README.md" />
+    <Content Include="components\paper-ripple\.bower.json" />
+    <Content Include="components\paper-ripple\bower.json" />
+    <Content Include="components\paper-ripple\README.md" />
+    <Content Include="components\paper-shadow\.bower.json" />
+    <Content Include="components\paper-shadow\bower.json" />
+    <Content Include="components\paper-shadow\README.md" />
+    <Content Include="components\paper-tabs\.bower.json" />
+    <Content Include="components\paper-tabs\bower.json" />
+    <Content Include="components\paper-tabs\README.md" />
+    <Content Include="components\platform\.bower.json" />
+    <Content Include="components\platform\bower.json" />
+    <Content Include="components\platform\build.log" />
+    <Content Include="components\platform\platform.js.map" />
+    <Content Include="components\platform\README.md" />
+    <Content Include="components\polymer\.bower.json" />
+    <Content Include="components\polymer\bower.json" />
+    <Content Include="components\polymer\build.log" />
+    <Content Include="components\polymer\polymer.js.map" />
+    <Content Include="components\polymer\README.md" />
+    <Content Include="components\qp-stuff\font-roboto2\.bower.json" />
+    <Content Include="components\qp-stuff\paper-button\.bower.json" />
+    <Content Include="components\qp-stuff\paper-button\bower.json" />
+    <Content Include="components\qp-stuff\paper-button\README.md" />
+    <Content Include="components\qp-stuff\paper-focusable\.bower.json" />
+    <Content Include="components\qp-stuff\paper-focusable\bower.json" />
+    <Content Include="components\qp-stuff\paper-focusable\README.md" />
+    <Content Include="components\qp-stuff\paper-icon-button\.bower.json" />
+    <Content Include="components\qp-stuff\paper-icon-button\bower.json" />
+    <Content Include="components\qp-stuff\paper-icon-button\README.md" />
+    <Content Include="components\qp-stuff\paper-ripple\.bower.json" />
+    <Content Include="components\qp-stuff\paper-ripple\bower.json" />
+    <Content Include="components\qp-stuff\paper-ripple\README.md" />
+    <Content Include="components\qp-stuff\paper-shadow\.bower.json" />
+    <Content Include="components\qp-stuff\paper-shadow\bower.json" />
+    <Content Include="components\qp-stuff\paper-shadow\README.md" />
+    <Content Include="components\qp-stuff\paper-tabs\.bower.json" />
+    <Content Include="components\qp-stuff\paper-tabs\bower.json" />
+    <Content Include="components\qp-stuff\paper-tabs\README.md" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Domain\Domain.csproj">
+      <Project>{dd9e1ee5-90b6-4d39-a18f-de09e9b2fa79}</Project>
+      <Name>Domain</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>0</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:59531/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>
