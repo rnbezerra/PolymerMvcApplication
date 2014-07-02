@@ -31,7 +31,7 @@ namespace Web.Controllers
         {
             if (list == null)
             {
-                string json = System.IO.File.ReadAllText(@"C:\GitHub\PolymerMvcApplication\Web\api\posts.json");
+                string json = System.IO.File.ReadAllText(@"C:\GitHub\PolymerMvcApplication\src\Web\api\posts.json");
 
                 list = Newtonsoft.Json.JsonConvert.DeserializeObject<List<PostView>>(json);
             }
@@ -50,7 +50,7 @@ namespace Web.Controllers
 
             string json = Newtonsoft.Json.JsonConvert.SerializeObject(list);
 
-            System.IO.File.WriteAllText(@"C:\GitHub\PolymerMvcApplication\Web\api\posts.json", json);
+            System.IO.File.WriteAllText(@"C:\GitHub\PolymerMvcApplication\src\Web\api\posts.json", json);
         }
     }
 }

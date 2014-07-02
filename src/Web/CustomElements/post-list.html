@@ -1,4 +1,5 @@
 ﻿<link rel="import" href="../components/polymer/polymer.html">
+<link rel="import" href="../components/paper-toast/paper-toast.html">
 <link rel="import" href="post-service.html">
 <link rel="import" href="post-card.html">
 
@@ -16,6 +17,8 @@
     </style>
     
     <!-- add markup here -->
+
+      <paper-toast id="toast" text=""></paper-toast>
 
       <post-service id="service" posts="{{posts}}">
       </post-service>
@@ -47,6 +50,8 @@
           handleFavorite: function (event, detail, sender) {
               var post = sender.templateInstance.model.post;
               this.$.service.setFavorite(post.uid, post.favorite);
+              this.$.toast.text = post.favorite ? "added" : "removed";
+              this.$.toast.show();
           }
       });
   </script>
